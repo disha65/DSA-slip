@@ -1,0 +1,62 @@
+Slip 2_1: Implement a list library (singlylist.h) for a singly linked list of integer with the 
+operations create, display. Write a menu driven program to call these operations
+
+Solution: 
+
+Header File : singlylist.h 
+
+#include<stdio.h> 
+#include<stdlib.h>
+struct node 
+{ int data; 
+ struct node *next; 
+}; 
+struct node *f; 
+void create() 
+{ 
+ int n,i; 
+struct node *s; 
+ printf("enter number of nodes needed : "); 
+ scanf("%d",&n); 
+ f=(struct node *)malloc(sizeof(struct node)); 
+ printf("enter data : "); 
+ scanf("%d",&f->data); 
+ s=f; 
+ for(i=1;i<n;i++) 
+ { 
+ s->next=(struct node *)malloc(sizeof(struct node)); 
+ s=s->next; 
+printf("enter data :"); 
+ scanf("%d",&s->data); 
+ } 
+s->next= NULL; 
+} 
+void display() 
+{ 
+ struct node *s; 
+ for(s=f;s!=NULL;s=s->next) 
+ { 
+printf("%d ->",s->data); 
+ } 
+} 
+Program File : 
+
+#include <stdio.h> 
+#include " singlylist.h " 
+main() 
+{ int ch; 
+ do{ 
+printf("\n1.create\n2.display\n3.exit"); 
+ printf("\nenter choice :"); 
+ scanf("%d",&ch); 
+ switch (ch) 
+{ 
+ case 1: create(); 
+break; 
+case 2: display(); 
+ break; 
+ case 3: break; 
+ default: printf("invalid input"); 
+} 
+ }while(ch!=3); 
+}
