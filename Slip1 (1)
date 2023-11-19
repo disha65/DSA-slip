@@ -1,7 +1,9 @@
 Slip 1_1: .Implement a list library (doublylist.h) for a doubly linked list of integers with 
 the create, display operations. Write a menu driven program to call these operations. 
 Solution:-//
+
 Header File : doublylist.h 
+
 #include<stdio.h> 
 #include<stdlib.h> 
 struct node 
