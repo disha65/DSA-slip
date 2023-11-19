@@ -1,0 +1,80 @@
+Slip 3_1 : Sort a random array of n integers (accept the value of n from user) in 
+
+ascending order by using insertion sort algorithm.
+
+Solution : 
+
+/* Insertion sort on random nos */ 
+
+#include<stdio.h> 
+int main() 
+{ 
+ int a[10],i,j,n,key; 
+ printf("Enter how many numbers: "); 
+scanf("%d",&n); 
+ for(i=0; i<n; i++) 
+ { 
+a[i]=rand()%100; 
+ } 
+ printf("\n Before sorting array is ");
+for(i=0;i<n;i++) 
+{ 
+printf("%d ",a[i]); 
+ } 
+ for(i=1; i<n; i++) 
+ { 
+ key = a[i]; 
+for(j=i-1; j>=0; j--) 
+ { 
+ if(a[j] > key) 
+ { 
+ a[j+1]=a[j]; 
+ } 
+ else 
+ break; 
+ } 
+ a[j+1]=key; 
+ } 
+printf("\nAfter sort array is: "); 
+ for(i=0; i<n; i++) 
+ { 
+ printf("%d ",a[i]); 
+ } 
+}
+
+###################
+
+Slip 4_1: Read the ‘n’ numbers from user and sort using bubble sort 
+
+Solution : 
+
+#include <stdio.h> 
+void main(){ 
+ int a[20],i,n,temp; 
+printf("enter number of elements :"); 
+ scanf("%d",&n); 
+ for(i=0;i<n;i++) 
+ { 
+ printf("enter number :"); 
+ scanf("%d",&a[i]); 
+} 
+ printf("/n before sorting :"); 
+ for(i=0;i<n;i++) 
+ { 
+ printf("%d\t",a[i]); 
+ } 
+ printf("/n after sorting :"); 
+ for(i=0;i<n;i++) 
+ { 
+ if(a[i]>a[i+1]) 
+ { 
+ temp=a[i]; 
+ a[i]=a[i+1]; 
+ a[i+1]=temp; 
+ } 
+ } 
+ for(i=0;i<n;i++) 
+ { 
+ printf("%d\t",a[i]); 
+ } 
+}
