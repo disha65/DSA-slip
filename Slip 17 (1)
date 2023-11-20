@@ -1,0 +1,62 @@
+Slip 17_1 : 1 Implement a list library (singlylist.h) for a singly linked list. Create a linked 
+list, reverse it and display reversed linked list
+Solution : 
+
+Header File : singlylist.h 
+
+#include <stdio.h> 
+#include <stdlib.h>
+struct node 
+{ int data; 
+struct node *next; 
+};
+struct node *f; 
+void create()
+{ 
+struct node *s; 
+int n,i; 
+printf("Enter how many nodes"); 
+scanf("%d",&n); 
+f=(struct node *)malloc(sizeof(struct node));
+printf("Enter data"); 
+scanf("%d",&f->data);
+s=f; 
+for(i=1;i<n;i++) 
+{ 
+s->next=(struct node *)malloc(sizeof(struct node)); 
+s=s->next; 
+printf("Enter data");
+scanf("%d",&s->data); } 
+s->next=NULL; 
+} void display() 
+{ struct node *s; 
+for(s=f;s!=NULL;s=s->next) 
+{ 
+printf("%d ->",s->data);
+} } 
+void reverse() 
+{ 
+int cnt=0,i; 
+struct node *s; 
+for(s=f;s!=NULL;s=s->next) 
+{
+cnt++; 
+} 
+while(cnt>0) 
+{ 
+for(i=1,s=f;i<cnt;i++) 
+{ s=s->next; } 
+printf("%d ->",s->data);
+cnt--; } 
+} 
+
+Program File
+
+#include<stdio.h> 
+#include" singlylist.h" 
+main() 
+{ 
+create(); 
+display(); 
+reverse(); 
+}
