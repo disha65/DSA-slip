@@ -1,4 +1,4 @@
-Slip 20_2, Slip 29_2 :There are lists where new elements are always appended at the end
+ Slip 29_2 :There are lists where new elements are always appended at the end
 of the list. The list can be implemented as a circular list with the external pointer pointing to 
 the last element of the list. Implement singly linked circular list of integers with append and 
 display operations. The operation append(L, n), appends to the end of the list, n integers 
