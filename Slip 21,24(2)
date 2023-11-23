@@ -1,0 +1,45 @@
+Slip 21_2, Slip 24_2 : Read the data from the file “employee.txt” and sort on names in 
+
+alphabetical order (use strcmp) using insertion sort or selection sort. 
+
+Solution : Using Insertion sort 
+
+#include<stdio.h> 
+
+#include<stdlib.h> 
+
+#include<string.h> 
+
+struct employee 
+
+{ 
+
+ char name[20]; 
+
+ int age; 
+
+}emp[10]; 
+
+int readfile(struct employee a[]) 
+
+{ 
+
+ int i=0; 
+
+ FILE*fp; 
+
+ if((fp=fopen("emp.txt","r"))!=NULL) 
+
+ { 
+
+ while(!feof(fp)) 
+
+ { 
+
+ fscanf(fp,"%s%d",&a[i].name,&a[i].age); 
+
+ i++; 
+
+ } 
+
+ }
