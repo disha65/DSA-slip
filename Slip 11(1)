@@ -1,0 +1,59 @@
+Slip 11_1:Accept n values in array from user. Accept a value x from user and use sentinel 
+
+linear search algorithm to check whether the number is present in the array or not and 
+
+output the position if the number is present 
+
+Solution :
+
+#include<stdio.h> 
+
+void sentinelsearch(int a[10],int n,int sr) 
+
+{ int i,cnt=0; 
+
+a[n]=sr; 
+
+while(sr!=a[i]) 
+
+{ i++; 
+
+} 
+
+if(i<n) 
+
+printf("Element is found at %d position ",i); 
+
+else 
+
+printf("element is not found "); 
+
+} 
+
+main() 
+
+{ 
+
+int n,i,sr,a[10]; 
+
+printf("enter how many values"); 
+
+scanf("%d",&n); 
+
+for(i=0;i<n;i++) 
+
+{ 
+
+printf("enter values"); 
+
+scanf("%d",&a[i]); 
+
+} 
+
+printf("\n enter search element"); 
+
+scanf("%d",&sr); 
+
+sentinelsearch(a,n,sr); 
+
+}
